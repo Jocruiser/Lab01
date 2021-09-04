@@ -1,0 +1,16 @@
+---
+MainSourceFile:  '/home/joanna/Documents/lab-01-Jocruiser/prob02/main.cc'
+Diagnostics:
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '0.075 is a magic number; consider replacing it with a named constant'
+      FilePath:        main.cc
+      FileOffset:      125
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '100 is a magic number; consider replacing it with a named constant'
+      FilePath:        main.cc
+      FileOffset:      417
+      Replacements:    []
+...

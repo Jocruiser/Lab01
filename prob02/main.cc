@@ -1,24 +1,34 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 int main() {
 
 //Declare variables
-int mealcost;
-float tip;
+float mealcost;
+float percentage;
 
+
+//ask user for variables
 std::cout << "Please input meal cost: ";
 std::cin >> mealcost;
 
 std::cout << "Please input tip percentage: ";
-std::cin >> tip; 
+std::cin >> percentage; 
 
-std::cout << "\n\nRestaurant Bill\n===================="
-	<< "\nSubtotal: $" << mealcost << setprecision(2)
-	<< "\nTaxes: $" << taxes << set precision(2) 
-	<< "\nTip: $" << tip << set precision(2)
+
+
+//display Restaurant Bill
+float tax = 0.075 * mealcost;
+float tip = mealcost * (percentage/100);
+float total = mealcost + tip + tax; 
+
+std::cout << "\nRestaurant Bill\n===================="
+	<< std::fixed << std::setprecision(2) // displays number with 2 decimal places
+	<< "\nSubtotal: $" << mealcost
+	<< "\nTaxes: $" << tax 
+	<< "\nTip: $" << tip
 	<< "\n====================" 
-	<< "\nTotal: $" << total << "\n\n"; 
+	<< "\nTotal: $" << total; 
 	
 
 return 0; 
